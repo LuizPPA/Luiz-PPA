@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+.none{
+  display: none;
+}
+.pointer{
+  cursor: pointer;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.lighter-blue{
+  color: #BBDEFF;
+}
+.light-blue{
+  color: #118BFF;
+}
+.blue{
+  color: #0E6FCC;
+}
+.dark-blue{
+  color: #09457F;
+}
+.darker-blue{
+  color: #0F3F6E;
+}
+.lighter-blue-bg{
+  color: #BBDEFF;
+}
+.light-blue-bg{
+  color: #118BFF;
+}
+.blue-bg{
+  color: #0E6FCC;
+}
+.dark-blue-bg{
+  color: #09457F;
+}
+.darker-blue-bg{
+  color: #0F3F6E;
+}
+body{
+    background-color: #F6F6F6;
+}

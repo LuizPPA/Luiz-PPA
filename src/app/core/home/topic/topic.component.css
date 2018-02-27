@@ -1,0 +1,22 @@
+.topic{
+  padding: 3%;
+}
+.icon{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.title{
+  color: #494949;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+.period{
+  color: #878686;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.description{
+  color: #494949;
+  font-size: 22px;
+}

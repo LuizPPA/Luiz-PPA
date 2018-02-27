@@ -1,0 +1,37 @@
+.bar{
+  height:100vh;
+  min-width: 70px;
+  background-color: #0F3F6E;
+  color: white;
+  box-shadow: 0px 1px 8px #3C3C3C;
+}
+.menu{
+  padding-left: 70px;
+  height:100vh;
+  background-color: #09457F;
+  color: white;
+  box-shadow: 0px 1px 3px #404040;
+}
+.menu-item{
+  margin: 0;
+  padding: 4% 5% 4% 6%;
+  font-size: 26px;
+  display: block;
+  cursor: pointer;
+  outline: 0;
+}
+.brand{
+  outline: 0;
+  margin: 0;
+  padding: 5% 5% 8% 6%;
+  font-size: 36px;
+  display: block;
+}
+.active-link{
+  background-color: #0F3F6E;
+}
+@media (max-width: 1200px){
+  .menu{
+    display: none;
+   }
+}
