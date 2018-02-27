@@ -13,4 +13,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  getExperiences(){
+    return this.topicService.getExperiences()
+  }
+
+  getEducation(){
+    return this.topicService.getEducation()
+  }
+
 }
