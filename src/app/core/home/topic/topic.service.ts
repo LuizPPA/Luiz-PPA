@@ -1,40 +1,52 @@
+import { Injectable, OnInit } from '@angular/core'
+import { Http, Response } from '@angular/http'
+
 import { Topic } from './topic.model'
 
-export class TopicService{
-  topics: Topic[] = [
-    new Topic(
-      'https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg',
-      'Backend Developer at Phari Solutions',
-      'DEC 2016 - PRESENT',
-      'I founded, together with three friends, a software development company that offers solutions to problems related to computer science. I am currently one of the chief developers of the team that today has extended its body and has administrative and financial sector.'
-    ),
-    new Topic(
-      'https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg',
-      'Backend Developer at Phari Solutions',
-      'DEC 2016 - PRESENT',
-      'I founded, together with three friends, a software development company that offers solutions to problems related to computer science. I am currently one of the chief developers of the team that today has extended its body and has administrative and financial sector.'
-    ),
-    new Topic(
-      'https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg',
-      'Backend Developer at Phari Solutions',
-      'DEC 2016 - PRESENT',
-      'I founded, together with three friends, a software development company that offers solutions to problems related to computer science. I am currently one of the chief developers of the team that today has extended its body and has administrative and financial sector.'
-    ),
-    new Topic(
-      'https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg',
-      'Backend Developer at Phari Solutions',
-      'DEC 2016 - PRESENT',
-      'I founded, together with three friends, a software development company that offers solutions to problems related to computer science. I am currently one of the chief developers of the team that today has extended its body and has administrative and financial sector.'
-    ),
-    new Topic(
-      'https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg',
-      'Backend Developer at Phari Solutions',
-      'DEC 2016 - PRESENT',
-      'I founded, together with three friends, a software development company that offers solutions to problems related to computer science. I am currently one of the chief developers of the team that today has extended its body and has administrative and financial sector.'
-    )
-  ]
+@Injectable()
+export class TopicService implements OnInit{
+  experiences: Topic[] = []
+  education: Topic[] = []
 
-  getTopics(){
-    return this.topics.slice()
+  constructor(private http: Http){
+    this.fetchExperiences()
+    this.fetchEducation()
+  }
+
+  ngOnInit(){
+  }
+
+  putExperiences(){
+    this.http.put('https://luizppa-com.firebaseio.com/experiences.json', this.experiences).subscribe((response: Response) => {
+      console.log(response)
+    })
+  }
+
+  putEducation(){
+    this.http.put('https://luizppa-com.firebaseio.com/education.json', this.education).subscribe((response: Response) => {
+      console.log(response)
+    })
+  }
+
+  fetchExperiences(){
+    console.log('Fetching experiences')
+    this.http.get('https://luizppa-com.firebaseio.com/experiences.json').subscribe((response: Response) => {
+      this.experiences = response.json()
+    })
+  }
+
+  fetchEducation(){
+    console.log('Fetching education')
+    this.http.get('https://luizppa-com.firebaseio.com/experiences.json').subscribe((response: Response) => {
+      this.education = response.json()
+    })
+  }
+
+  getExperiences(){
+    return this.experiences.slice()
+  }
+
+  getEducation(){
+    return this.education.slice()
   }
 }
