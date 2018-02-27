@@ -37,7 +37,7 @@ export class TopicService implements OnInit{
 
   fetchEducation(){
     console.log('Fetching education')
-    this.http.get('https://luizppa-com.firebaseio.com/experiences.json').subscribe((response: Response) => {
+    this.http.get('https://luizppa-com.firebaseio.com/education.json').subscribe((response: Response) => {
       this.education = response.json()
     })
   }

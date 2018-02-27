@@ -51,7 +51,7 @@ a{
 .active-link{
   background-color: #0F3F6E;
 }
-@media (max-width: 1200px){
+@media (max-width: 999px){
   .menu{
     display: none;
    }
