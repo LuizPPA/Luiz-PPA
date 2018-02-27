@@ -1,10 +1,10 @@
 .picture{
-  height: 40vh;
+  height: 14%;
   margin-top: 8%;
   border-radius: 50%;
   border: 8px solid white;
   position: absolute;
-  box-shadow: -1px -1px 5px #DBDBDB;
+  box-shadow: -1px -1px 5px #C6C4C4;
 }
 .canvas{
   margin-top: 15%;
@@ -13,7 +13,7 @@
   margin: 28% 0% 8% 15%;
   padding-bottom: 2%;
   background-color: white;
-  box-shadow: 0px 0px 5px #DBDBDB;
+  box-shadow: 0px 0px 5px #C6C4C4;
 }
 .name{
   font-size: 48px;
@@ -29,7 +29,11 @@
 }
 .texts{
   background-color: white;
-  box-shadow: 0px 0px 3px #DBDBDB;
+  box-shadow: 0px 0px 3px #C6C4C4;
+}
+.topic{
+  font-size: 36px;
+  padding: 5% 0% 0% 2%;
 }
 @media (max-width: 500px){
   .picture{

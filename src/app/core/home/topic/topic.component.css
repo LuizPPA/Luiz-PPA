@@ -8,15 +8,30 @@
 }
 .title{
   color: #494949;
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 0px;
 }
 .period{
   color: #878686;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 0px;
 }
 .description{
   color: #494949;
   font-size: 22px;
+}
+.lighter-blue{
+  color: #BBDEFF;
+}
+.light-blue{
+  color: #118BFF;
+}
+.blue{
+  color: #0E6FCC;
+}
+.dark-blue{
+  color: #09457F;
+}
+.darker-blue{
+  color: #0F3F6E;
 }

@@ -9,7 +9,10 @@
       </div>
     </div>
     <div class="texts">
-      <app-topic *ngFor="let topic of topicService.getTopics()" [topic]="topic"></app-topic>
+      <p id='experiences' class="topic darker-blue"> Experiences</p>
+      <app-topic *ngFor="let topic of topicService.getExperiences()" [topic]="topic"></app-topic>
+      <p id='education' class="topic darker-blue"> Education</p>
+      <app-topic *ngFor="let topic of topicService.getEducation()" [topic]="topic"></app-topic>
     </div>
   </div>
 </div>
