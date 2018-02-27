@@ -65,29 +65,41 @@
   }
 }
 @media (max-width: 560px){
+  .picture{
+    height: 8%;
+    margin: 0% 0% 0% 33%;
+  }
   .header{
-    margin: 90% 0% 8% 15%;
+    margin: 50% 0% 8% 15%;
   }
   .texts{
     margin: 0% 0% 0% 15%;
   }
 }
-@media (max-width: 350px){
+@media (max-width: 512px){
   .picture{
-    margin: 10% 0% 10% 10%;
+    height: 8%;
+    margin: 0% 0% 0% 30%;
   }
   .header{
-    margin: 100% 0% 8% 20%;
+    margin: 70% 0% 8% 15%;
+  }
+  .texts{
+    margin: 0% 0% 0% 15%;
+  }
+  .name{
+    padding: 4% 0% 0% 10%;
+  }
+}
+@media (max-width: 350px){
+  .picture{
+    height: 5%;
+    margin: 0% 0% 0% 33%;
+  }
+  .header{
+    margin: 70% 0% 8% 20%;
   }
   .texts{
     margin: 0% 0% 0% 20%;
-  }
-}
-@media (max-width: 300px){
-  .header{
-    margin: 100% 0% 8% 30%;
-  }
-  .texts{
-    margin: 0% 0% 0% 30%;
   }
 }
