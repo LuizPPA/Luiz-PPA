@@ -1,5 +1,11 @@
+#showLess{
+
+}
+#showMore{
+  display: none;
+}
 .picture{
-  height: 14%;
+  width: 35%;
   margin: 10% 0% 0% 5%;
   border-radius: 50%;
   border: 8px solid white;
@@ -24,6 +30,10 @@
   font-size: 24px;
   padding:8% 0% 3% 5%;
 }
+.about{
+  font-size: 18px;
+  padding: 3% 5% 3% 5%;
+}
 .colapsable{
   margin-bottom: 0px;
   display: inline-block;
@@ -37,9 +47,30 @@
   font-size: 36px;
   padding: 5% 0% 0% 2%;
 }
+.button{
+  margin-top: 3%;
+  padding: 1.1% 2% 1.1% 2%;
+  border: 1px solid #062E54;
+}
+.button:hover{
+  text-decoration: none;
+  color: white;
+}
+.button:visited{
+  text-decoration: none;
+  color: white;
+}
+.button:focus{
+  text-decoration: none;
+  color: white;
+}
+.button:active{
+  color: white;
+  background-color: #062E54;
+}
 @media (max-width: 1200px){
   .picture{
-      max-height: 14%;
+      width: 40%;
       position: absolute;
       margin: 10% 0% 0% 0%;
    }
@@ -60,13 +91,13 @@
    }
 }
 @media (max-width: 730px){
-  .header{
-    margin: 70% 0% 8% 10%;
-  }
+  /* .header{
+    margin: 50% 0% 8% 10%;
+  } */
 }
 @media (max-width: 560px){
   .picture{
-    height: 8%;
+    /* height: 8%; */
     margin: 0% 0% 0% 33%;
   }
   .header{
@@ -78,11 +109,11 @@
 }
 @media (max-width: 512px){
   .picture{
-    height: 8%;
-    margin: 0% 0% 0% 30%;
+    /* height: 6%; */
+    margin: 0% 0% 0% 36%;
   }
   .header{
-    margin: 70% 0% 8% 15%;
+    margin: 50% 0% 8% 15%;
   }
   .texts{
     margin: 0% 0% 0% 15%;
@@ -93,13 +124,18 @@
 }
 @media (max-width: 350px){
   .picture{
-    height: 5%;
-    margin: 0% 0% 0% 33%;
+    /* height: 4%; */
+    margin: 0% 0% 0% 36%;
   }
   .header{
-    margin: 70% 0% 8% 20%;
+    margin: 50% 0% 8% 20%;
   }
   .texts{
     margin: 0% 0% 0% 20%;
+  }
+}
+@media (max-width: 300px){
+  .picture{
+    /* height: 3.1%; */
   }
 }

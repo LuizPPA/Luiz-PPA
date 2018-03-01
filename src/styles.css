@@ -27,19 +27,22 @@
   color: #0F3F6E;
 }
 .lighter-blue-bg{
-  color: #BBDEFF;
+  background-color: #BBDEFF;
 }
 .light-blue-bg{
-  color: #118BFF;
+  background-color: #118BFF;
 }
 .blue-bg{
-  color: #0E6FCC;
+  background-color: #0E6FCC;
 }
 .dark-blue-bg{
-  color: #09457F;
+  background-color: #09457F;
 }
 .darker-blue-bg{
-  color: #0F3F6E;
+  background-color: #0F3F6E;
+}
+.white{
+  color: white;
 }
 body{
     background-color: #F6F6F6;
