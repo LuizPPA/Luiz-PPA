@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations'
+
 import { TopicService } from './topic/topic.service'
 
 @Component({
@@ -7,6 +9,7 @@ import { TopicService } from './topic/topic.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  aboutColapsed = true
 
   constructor(private topicService: TopicService) {}
 
@@ -19,6 +22,10 @@ export class HomeComponent implements OnInit {
 
   getEducation(){
     return this.topicService.getEducation()
+  }
+
+  toggleColapse(){
+    this.aboutColapsed = !this.aboutColapsed
   }
 
 }

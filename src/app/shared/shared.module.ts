@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpModule } from "@angular/http"
@@ -11,13 +13,15 @@ import { HttpModule } from "@angular/http"
     CommonModule,
     ReactiveFormsModule,
     HttpModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   exports: [
     CommonModule,
     ReactiveFormsModule,
     HttpModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule {
