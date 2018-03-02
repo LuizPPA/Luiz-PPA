@@ -19,7 +19,7 @@
   margin: 28% 0% 8% 15%;
   padding-bottom: 2%;
   background-color: white;
-  box-shadow: 0px 0px 5px #C6C4C4;
+  box-shadow: 0px 0px 5px #C4C4C4;
   font-family: 'Open Sans', sans-serif;
 }
 .name{
@@ -40,7 +40,7 @@
 }
 .texts{
   background-color: white;
-  box-shadow: 0px 0px 3px #C6C4C4;
+  box-shadow: 0px 0px 3px #C4C4C4;
   font-family: 'Open Sans', sans-serif;
 }
 .topic{
@@ -48,6 +48,7 @@
   padding: 5% 0% 0% 2%;
 }
 .button{
+  box-shadow: 0px 0px 5px #C4C4C4;
   margin-top: 3%;
   padding: 1.1% 2% 1.1% 2%;
   border: 1px solid #062E54;
@@ -96,6 +97,9 @@
   } */
 }
 @media (max-width: 560px){
+  #download{
+    display: none;
+  }
   .picture{
     /* height: 8%; */
     margin: 0% 0% 0% 33%;
