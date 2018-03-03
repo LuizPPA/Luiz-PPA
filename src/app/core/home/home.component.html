@@ -6,10 +6,10 @@
       <p class="name darker-blue">Luiz Philippe</p>
       <p class="titles dark-blue">Full Stack Developer<br>Undergraduated in Computer Science</p>
       <div *ngIf="aboutColapsed" class="darker-blue" align="center" (click)="toggleColapse()">
-        <p class="colapsable pointer">Show more<br><i class="fas fa-angle-down"></i></p>
+        <p class="colapsable pointer">Show more<br><i class="fas fa-angle-up"></i></p>
       </div>
       <div *ngIf="!aboutColapsed" class="darker-blue" align="center" (click)="toggleColapse()">
-        <p class="colapsable pointer">Show less<br><i class="fas fa-angle-up"></i></p>
+        <p class="colapsable pointer">Show less<br><i class="fas fa-angle-down"></i></p>
       </div>
       <div class="about" *ngIf="!aboutColapsed" [class.none]="aboutColapsed" [@toggle]="aboutState">
         <p>I have been learning different programming languages ​​since 2014 when I started my technical course at the UFMG Technical College. I started my studies with C, and extended my knowledge to web-oriented languages ​​such as PHP, Ruby, JavaScript
