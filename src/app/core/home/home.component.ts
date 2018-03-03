@@ -1,15 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations'
+import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 
 import { TopicService } from './topic/topic.service'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('toggle', [
+      transition('void => open', [
+        style({
+          'opacity': 0,
+          'height': 0
+        }),
+        animate(200)
+      ]),
+      transition('open => void', [
+        animate(200, keyframes([
+          style({
+            'opacity': 1,
+            offset: 0
+          }),
+          style({
+            'opacity': 0,
+            'height': 0,
+            offset: 1
+          }),
+        ]))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
   aboutColapsed = true
+  aboutState = 'closed'
 
   constructor(private topicService: TopicService) {}
 
@@ -25,6 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   toggleColapse(){
+    this.aboutState == 'closed' ? this.aboutState = 'open' : this.aboutState = 'closed'
     this.aboutColapsed = !this.aboutColapsed
   }
 
