@@ -25,6 +25,7 @@
       <p id='education' class="topic darker-blue">Education</p>
       <app-topic *ngFor="let topic of getEducation()" [topic]="topic"></app-topic>
       <p id='skills' class="topic darker-blue">Skills</p>
+      <hr>
       <app-skill *ngFor="let skill of getSkills() " [skill]="skill"></app-skill>
     </div>
   </div>

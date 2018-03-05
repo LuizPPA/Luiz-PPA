@@ -1,5 +1,5 @@
 .skill{
-  padding: 3% 3% 0% 10%;
+  padding: 0% 3% 0% 10%;
 }
 .names{
   /* border-bottom: 3px solid #09457F; */
@@ -12,6 +12,7 @@
 .name{
   font-size: 20px;
   display: inline-block;
+  margin: 0;
 }
 .points{
 }
