@@ -36,7 +36,12 @@ export class SkillService{
     })
   }
 
-  getSkills(){
-    return this.skills.slice()
+  getSkills(amount: number){
+    if(amount < 1 || amount > this.skills.length){
+      return this.skills.slice()
+    }
+    else{
+      return this.skills.slice(0, amount)
+    }
   }
 }

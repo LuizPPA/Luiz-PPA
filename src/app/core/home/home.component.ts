@@ -35,6 +35,7 @@ import { SkillService } from './skill/skill.service'
 })
 export class HomeComponent implements OnInit {
   aboutColapsed = true
+  skillsColapsed = true
   aboutState = 'closed'
 
   constructor(private topicService: TopicService, private skillService: SkillService) {}
@@ -51,12 +52,21 @@ export class HomeComponent implements OnInit {
   }
 
   getSkills(){
-    return this.skillService.getSkills()
+    if(this.skillsColapsed){
+      return this.skillService.getSkills(3)
+    }
+    else{
+      return this.skillService.getSkills(0)
+    }
   }
 
-  toggleColapse(){
+  toggleAboutColapse(){
     this.aboutState == 'closed' ? this.aboutState = 'open' : this.aboutState = 'closed'
     this.aboutColapsed = !this.aboutColapsed
+  }
+
+  toggleSkillsColapse(){
+    this.skillsColapsed = !this.skillsColapsed
   }
 
 }
