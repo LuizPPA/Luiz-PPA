@@ -6,7 +6,7 @@
     <p class="name">{{ skill.name }}</p>
   </div>
   <div class="col-md-6 col-offset-md-1">
-    <i *ngFor="let level of range(10)" [class.fas]="level <= skill.level" [class.far]="level > skill.level" class="fa-circle levelPoint"></i>
+    <i *ngFor="let level of range(10)" [class.fas]="level < skill.level" [class.far]="level >= skill.level" class="fa-circle levelPoint"></i>
   </div>
 </div>
 <hr>
