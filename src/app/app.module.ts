@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './shared/shared.module'
 import { CoreModule } from './core/core.module'
 import { TopicService } from './core/home/topic/topic.service'
+import { SkillService } from './core/home/skill/skill.service'
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { TopicService } from './core/home/topic/topic.service'
     CoreModule,
     AppRoutingModule
   ],
-  providers: [TopicService],
+  providers: [TopicService, SkillService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

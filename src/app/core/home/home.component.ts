@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 
 import { TopicService } from './topic/topic.service'
+import { SkillService } from './skill/skill.service'
 
 @Component({
   selector: 'app-home',
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
   aboutColapsed = true
   aboutState = 'closed'
 
-  constructor(private topicService: TopicService) {}
+  constructor(private topicService: TopicService, private skillService: SkillService) {}
 
   ngOnInit() {
   }
@@ -47,6 +48,10 @@ export class HomeComponent implements OnInit {
 
   getEducation(){
     return this.topicService.getEducation()
+  }
+
+  getSkills(){
+    return this.skillService.getSkills()
   }
 
   toggleColapse(){
