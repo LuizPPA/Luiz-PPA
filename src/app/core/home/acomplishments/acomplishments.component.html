@@ -1,0 +1,21 @@
+<div class="acomplishments">
+  <div class="row dark-blue">
+    <i class="fas fa-globe icon"></i>
+    <p class="title">Languages</p>
+  </div>
+  <app-acomplishment *ngFor="let language of getLanguages()" [acomplishment]="language"></app-acomplishment>
+</div>
+<div class="acomplishments">
+  <div class="row dark-blue">
+    <i class="fas fa-certificate icon"></i>
+    <p class="title">Awards</p>
+  </div>
+  <app-acomplishment *ngFor="let award of getAwards()" [acomplishment]="award"></app-acomplishment>
+</div>
+<div class="acomplishments">
+  <div class="row dark-blue">
+    <i class="fas fa-check-circle icon"></i>
+    <p class="title">Certificates</p>
+  </div>
+  <app-acomplishment *ngFor="let certificate of getCertificates()" [acomplishment]="certificate"></app-acomplishment>
+</div>

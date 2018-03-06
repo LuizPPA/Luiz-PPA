@@ -6,6 +6,7 @@ import { SharedModule } from './shared/shared.module'
 import { CoreModule } from './core/core.module'
 import { TopicService } from './core/home/topic/topic.service'
 import { SkillService } from './core/home/skill/skill.service'
+import { AcomplishmentService } from './core/home/acomplishments/acomplishment/acomplishment.service'
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { SkillService } from './core/home/skill/skill.service'
     CoreModule,
     AppRoutingModule
   ],
-  providers: [TopicService, SkillService],
+  providers: [TopicService, SkillService, AcomplishmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
