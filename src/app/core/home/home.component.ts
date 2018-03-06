@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
 
   getSkills(){
     if(this.skillsColapsed){
-      return this.skillService.getSkills(3)
+      return this.skillService.getSkills(4)
     }
     else{
       return this.skillService.getSkills(0)
