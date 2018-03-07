@@ -7,7 +7,10 @@ import { HomeComponent } from './home/home.component'
 import { TopicComponent } from './home/topic/topic.component'
 import { SkillComponent } from './home/skill/skill.component'
 import { AcomplishmentsComponent } from './home/acomplishments/acomplishments.component'
-import { AcomplishmentComponent } from './home/acomplishments/acomplishment/acomplishment.component'
+import { AcomplishmentComponent } from './home/acomplishments/acomplishment/acomplishment.component';
+import { HeaderComponent } from './header/header.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectComponent } from './portfolio/project/project.component'
 
 @NgModule({
   declarations: [
@@ -16,14 +19,18 @@ import { AcomplishmentComponent } from './home/acomplishments/acomplishment/acom
     TopicComponent,
     SkillComponent,
     AcomplishmentsComponent,
-    AcomplishmentComponent
+    AcomplishmentComponent,
+    HeaderComponent,
+    PortfolioComponent,
+    ProjectComponent
   ],
   imports: [
     SharedModule,
     CoreRoutingModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent
   ]
 })
 

@@ -1,0 +1,30 @@
+.box{
+  margin: 3% 8% 8% 8%;
+}
+.icon{
+  width: 100%;
+  border-radius: 50%;
+}
+.title{
+  margin-bottom: 10%;
+  font-size: 32px;
+  display: block;
+}
+.download{
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #8F8F8F;
+  margin: 0;
+}
+.link{
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #545454;
+  margin: 0;
+}
+.description{
+  font-size: 20px;
+  color: #545454;
+}

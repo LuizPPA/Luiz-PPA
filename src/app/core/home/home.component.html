@@ -1,40 +1,19 @@
 <div class="row">
-  <img class="picture" src="https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg" alt="A picture of me">
-  <a id="download" href="https://s3-sa-east-1.amazonaws.com/luizppa-assets/luizppa-cv.pdf" download class="button right dark-blue-bg white">Download as PDF</a>
-  <div class="canvas">
-    <div class="header">
-      <p class="name darker-blue">Luiz Philippe</p>
-      <p class="titles dark-blue">Full Stack Developer • Phari Solutions<br>Undergraduated in Computer Science • UFMG</p>
-      <p class="location dark-blue">Belo Horizonte, Brazil</p>
-      <div *ngIf="aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
-        <p class="colapsable pointer">Show more<br><i class="fas fa-angle-down"></i></p>
-      </div>
-      <div *ngIf="!aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
-        <p class="colapsable pointer">Show less<br><i class="fas fa-angle-up"></i></p>
-      </div>
-      <div class="about" *ngIf="!aboutColapsed" [@toggle]="aboutState">
-        <p>I have been learning different programming languages ​​since 2014 when I started my technical course at the UFMG Technical College. I started my studies with C, and extended my knowledge to web-oriented languages ​​such as PHP, Ruby, JavaScript
-          and so on. Currently I'm studying for my bachelor's degree in Computer Science at the Federal University of Minas Gerais. Also, i'm involved with several online courses such as design, UX, machine learning and some of the most commonly used
-          JavaScript frameworks.
-        </p>
-      </div>
+  <div class="texts">
+    <p id='experiences' class="topic darker-blue">Experiences</p>
+    <app-topic *ngFor="let topic of getExperiences()" [topic]="topic"></app-topic>
+    <p id='education' class="topic darker-blue">Education</p>
+    <app-topic *ngFor="let topic of getEducation()" [topic]="topic"></app-topic>
+    <p id='skills' class="topic darker-blue">Skills</p>
+    <hr>
+    <app-skill *ngFor="let skill of getSkills(); let i = index" [skill]="skill"></app-skill>
+    <div *ngIf="skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
+      <p class="colapsable pointer">Show more<br><i class="fas fa-angle-down"></i></p>
     </div>
-    <div class="texts">
-      <p id='experiences' class="topic darker-blue">Experiences</p>
-      <app-topic *ngFor="let topic of getExperiences()" [topic]="topic"></app-topic>
-      <p id='education' class="topic darker-blue">Education</p>
-      <app-topic *ngFor="let topic of getEducation()" [topic]="topic"></app-topic>
-      <p id='skills' class="topic darker-blue">Skills</p>
-      <hr>
-      <app-skill *ngFor="let skill of getSkills(); let i = index" [skill]="skill"></app-skill>
-      <div *ngIf="skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
-        <p class="colapsable pointer">Show more<br><i class="fas fa-angle-down"></i></p>
-      </div>
-      <div *ngIf="!skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
-        <p class="colapsable pointer">Show less<br><i class="fas fa-angle-up"></i></p>
-      </div>
-      <p id='acomplishments' class="topic darker-blue">Acomplishments</p>
-      <app-acomplishments></app-acomplishments>
+    <div *ngIf="!skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
+      <p class="colapsable pointer">Show less<br><i class="fas fa-angle-up"></i></p>
     </div>
+    <p id='acomplishments' class="topic darker-blue">Acomplishments</p>
+    <app-acomplishments></app-acomplishments>
   </div>
 </div>
