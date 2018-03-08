@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core'
+import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 
 import { Skill } from './skill.model'
 import { SkillService } from './skill.service'
@@ -6,7 +7,17 @@ import { SkillService } from './skill.service'
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.css']
+  styleUrls: ['./skill.component.css'],
+  animations: [
+    trigger('fade', [
+      transition('void => *', [
+        style({
+          'opacity': 0
+        }),
+        animate(300)
+      ])
+    ]),
+  ]
 })
 export class SkillComponent implements OnInit {
 

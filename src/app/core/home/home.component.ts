@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 
 import { TopicService } from './topic/topic.service'
 import { SkillService } from './skill/skill.service'
@@ -8,7 +7,7 @@ import { SkillService } from './skill/skill.service'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   skillsColapsed = true
