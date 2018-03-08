@@ -1,6 +1,7 @@
 .texts{
   background-color: white;
   box-shadow: 0px 0px 3px #C4C4C4;
+  text-align: justify;
   font-family: 'Open Sans', sans-serif;
   padding-bottom: 8%;
 }
