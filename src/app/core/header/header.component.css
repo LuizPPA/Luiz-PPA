@@ -22,15 +22,11 @@
 }
 .location{
   font-size: 18px;
-  padding:0% 0% 0% 5%;
-}
-.about{
-  font-size: 18px;
-  padding: 0% 5% 3% 5%;
-  text-align: justify;
+  padding:0% 5% 0% 5%;
 }
 .contacts{
-  margin-top: 3%;
+  font-size: 18px;
+  margin: 3%;
 }
 .contact{
   margin: 0%;
@@ -40,6 +36,11 @@
 }
 .contact-icon{
   margin-right: 3%;
+}
+.about{
+  font-size: 18px;
+  padding: 0% 5% 3% 5%;
+  text-align: justify;
 }
 @media (max-width: 1200px){
   .picture{
