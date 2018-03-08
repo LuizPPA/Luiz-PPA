@@ -12,6 +12,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    document.getElementById('portfolio').scrollIntoView()
   }
 
   getProjects(){

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 
 import { TopicService } from './topic/topic.service'
@@ -12,9 +13,16 @@ import { SkillService } from './skill/skill.service'
 export class HomeComponent implements OnInit {
   skillsColapsed = true
 
-  constructor(private topicService: TopicService, private skillService: SkillService) {}
+  constructor(private topicService: TopicService, private skillService: SkillService, private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment => {
+      try{
+        document.getElementById(fragment).scrollIntoView()
+      }
+      catch(e){
+      }
+    })
   }
 
   getExperiences(){
