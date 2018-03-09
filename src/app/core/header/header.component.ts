@@ -78,6 +78,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     })
   }
 
+  changeLanguage(){
+    this.coreService.changeLanguage()
+  }
+
   toggleAboutColapse(){
     this.aboutState == 'closed' ? this.aboutState = 'open' : this.aboutState = 'closed'
     this.aboutColapsed = !this.aboutColapsed
