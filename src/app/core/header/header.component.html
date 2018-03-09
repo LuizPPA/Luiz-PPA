@@ -1,9 +1,12 @@
 <div class="row" id="top">
   <img class="picture" src="https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg" alt="A picture of me">
-  <div class="button right dark-blue-bg white" (click)="coreService.changeLanguage()">Change Language</div>
   <a id="download" href="https://s3-sa-east-1.amazonaws.com/luizppa-assets/luizppa-cv.pdf" download class="button right dark-blue-bg white">Download as PDF</a>
   <div class="header">
     <p class="name darker-blue">Luiz Philippe</p>
+    <div class="pointer darker-blue lang-box" align="center" (click)="coreService.changeLanguage()">
+      <p class="lang">{{ lang }}</p>
+      <i class="fas fa-globe"></i>
+    </div>
     <p class="titles dark-blue">{{ work }}<br>{{ education }}</p>
     <p class="location dark-blue">{{ location }}</p>
     <div class="row contacts dark-blue">

@@ -38,6 +38,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   uncolapse = "Ver mais"
   colapse = "Ver menos"
   about = "Tenho aprendido diferentes linguagens de programação desde 2014 quando iniciei meu curso técnico no Colégio Técnico da UFMG. Comecei meus estudos com C, e estendi meus conhecimentos para linguagens voltadas para desenvolvimento web, como PHP, JavaScript, HTML e assim por diante. Atualmente, estou estudando para o meu bacharelado em Ciência da Computação na Universidade Federal de Minas Gerais. Além disso, estou envolvido com vários cursos on-line, como design, UX, aprendizado de máquinas e alguns dos frameworks de JavaScript mais utilizados."
+  lang = 'En'
 
   subscription = null
   aboutColapsed = true
@@ -53,6 +54,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.uncolapse = "Show more"
       this.colapse = "Show less"
       this.about = "I have been learning different programming languages ​​since 2014 when I started my technical course at the UFMG Technical College. I started my studies with C, and extended my knowledge to web-oriented languages ​​such as PHP, Ruby, JavaScript and so on. Currently I'm studying for my bachelor's degree in Computer Science at the Federal University of Minas Gerais. Also, i'm involved with several online courses such as design, UX, machine learning and some of the most commonly used JavaScript frameworks."
+      this.lang = 'Pt-Br'
     }
     this.subscription = this.coreService.lang.subscribe((lang) => {
       if(lang == 'en'){
@@ -62,6 +64,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.uncolapse = "Show more"
         this.colapse = "Show less"
         this.about = "I have been learning different programming languages ​​since 2014 when I started my technical course at the UFMG Technical College. I started my studies with C, and extended my knowledge to web-oriented languages ​​such as PHP, Ruby, JavaScript and so on. Currently I'm studying for my bachelor's degree in Computer Science at the Federal University of Minas Gerais. Also, i'm involved with several online courses such as design, UX, machine learning and some of the most commonly used JavaScript frameworks."
+        this.lang = 'Pt-Br'
       }
       else if(lang == 'pt'){
         this.work = "Desenvolvedor Full Stack • Phari Solutions"
@@ -70,6 +73,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.uncolapse = "Ver mais"
         this.colapse = "Ver menos"
         this.about = "Tenho aprendido diferentes linguagens de programação desde 2014 quando iniciei meu curso técnico no Colégio Técnico da UFMG. Comecei meus estudos com C, e estendi meus conhecimentos para linguagens voltadas para desenvolvimento web, como PHP, JavaScript, HTML e assim por diante. Atualmente, estou estudando para o meu bacharelado em Ciência da Computação na Universidade Federal de Minas Gerais. Além disso, estou envolvido com vários cursos on-line, como design, UX, aprendizado de máquinas e alguns dos frameworks de JavaScript mais utilizados."
+        this.lang = 'En'
       }
     })
   }

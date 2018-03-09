@@ -14,11 +14,19 @@
 }
 .name{
   font-size: 48px;
-  padding: 4% 0% 0% 30%;
+  margin-top: 4%;
+  padding: 0% 0% 0% 30%;
+  display: inline-block;
+}
+.lang{
+  font-size: 12px;
+}
+.lang{
+  margin: 0%;
 }
 .titles{
   font-size: 24px;
-  padding:8% 0% 0% 5%;
+  padding:4% 0% 0% 5%;
 }
 .location{
   font-size: 18px;

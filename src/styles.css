@@ -70,6 +70,9 @@
   color: white;
   background-color: #062E54;
 }
+.inline-block{
+  display: inline-block;
+}
 body{
     background-color: #F6F6F6;
 }
