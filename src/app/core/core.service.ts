@@ -1,6 +1,8 @@
+import { Injectable } from '@angular/core'
 import { Subject } from 'rxjs/Subject'
 import { CookieService } from 'ngx-cookie-service'
 
+@Injectable()
 export class CoreService{
   currentLang = 'pt'
   lang: Subject<string> = new Subject<string>()
