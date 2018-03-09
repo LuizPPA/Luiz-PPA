@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, OnInit, OnDestroy, Input } from '@angular/core'
+import { CoreService } from '../../core.service'
 
 import { AcomplishmentService } from './acomplishment/acomplishment.service'
 
@@ -7,11 +8,33 @@ import { AcomplishmentService } from './acomplishment/acomplishment.service'
   templateUrl: './acomplishments.component.html',
   styleUrls: ['./acomplishments.component.css']
 })
-export class AcomplishmentsComponent implements OnInit {
+export class AcomplishmentsComponent implements OnInit, OnDestroy {
+  languages = 'Idiomas'
+  awards = 'Prêmios'
+  certificates = 'Certificados'
 
-  constructor(private acomplishmentService: AcomplishmentService) {}
+  subscription = null
+
+  constructor(private acomplishmentService: AcomplishmentService, private coreService: CoreService) {}
 
   ngOnInit() {
+    if(this.coreService.currentLang == 'en'){
+      this.languages = 'Languages'
+      this.awards = 'Awards'
+      this.certificates = 'Certificates'
+    }
+    this.subscription = this.coreService.lang.subscribe((lang) => {
+      if(lang == 'en'){
+        this.languages = 'Languages'
+        this.awards = 'Awards'
+        this.certificates = 'Certificates'
+      }
+      else if(lang == 'pt'){
+        this.languages = 'Idiomas'
+        this.awards = 'Prêmios'
+        this.certificates = 'Certificados'
+      }
+    })
   }
 
   getLanguages(){
@@ -24,6 +47,10 @@ export class AcomplishmentsComponent implements OnInit {
 
   getCertificates(){
     return this.acomplishmentService.getCertificates()
+  }
+
+  ngOnDestroy(){
+    this.subscription.unsubscribe()
   }
 
 }

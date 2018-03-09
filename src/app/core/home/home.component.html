@@ -1,19 +1,19 @@
 <div class="row">
   <div class="texts">
-    <p id='experiences' class="topic darker-blue">Experiences</p>
+    <p id='experiences' class="topic darker-blue">{{ experiences }}</p>
     <app-topic *ngFor="let topic of getExperiences()" [topic]="topic"></app-topic>
-    <p id='education' class="topic darker-blue">Education</p>
+    <p id='education' class="topic darker-blue">{{ education }}</p>
     <app-topic *ngFor="let topic of getEducation()" [topic]="topic"></app-topic>
-    <p id='skills' class="topic darker-blue">Skills</p>
+    <p id='skills' class="topic darker-blue">{{ skills }}</p>
     <hr>
     <app-skill *ngFor="let skill of getSkills(); let i = index" [skill]="skill"></app-skill>
     <div *ngIf="skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
-      <p class="colapsable pointer">Show more<br><i class="fas fa-angle-down"></i></p>
+      <p class="colapsable pointer">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
     </div>
     <div *ngIf="!skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
-      <p class="colapsable pointer">Show less<br><i class="fas fa-angle-up"></i></p>
+      <p class="colapsable pointer">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
     </div>
-    <p id='acomplishments' class="topic darker-blue">Acomplishments</p>
+    <p id='accomplishments' class="topic darker-blue">{{ accomplishments }}</p>
     <app-acomplishments></app-acomplishments>
   </div>
 </div>

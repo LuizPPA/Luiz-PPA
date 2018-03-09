@@ -1,10 +1,11 @@
 <div class="row" id="top">
   <img class="picture" src="https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg" alt="A picture of me">
+  <div class="button right dark-blue-bg white" (click)="coreService.changeLanguage()">Change Language</div>
   <a id="download" href="https://s3-sa-east-1.amazonaws.com/luizppa-assets/luizppa-cv.pdf" download class="button right dark-blue-bg white">Download as PDF</a>
   <div class="header">
     <p class="name darker-blue">Luiz Philippe</p>
-    <p class="titles dark-blue">Full Stack Developer • Phari Solutions<br>Undergraduated in Computer Science • UFMG</p>
-    <p class="location dark-blue">Belo Horizonte, Brazil</p>
+    <p class="titles dark-blue">{{ work }}<br>{{ education }}</p>
+    <p class="location dark-blue">{{ location }}</p>
     <div class="row contacts dark-blue">
       <div class="col-md-6">
         <p class="contact"><i class="fas fa-envelope-square contact-icon"></i>luizphilippep@gmail.com</p>
@@ -16,16 +17,13 @@
       </div>
     </div>
     <div *ngIf="aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
-      <p class="colapsable pointer">Show more<br><i class="fas fa-angle-down"></i></p>
+      <p class="colapsable pointer">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
     </div>
     <div *ngIf="!aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
-      <p class="colapsable pointer">Show less<br><i class="fas fa-angle-up"></i></p>
+      <p class="colapsable pointer">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
     </div>
     <div class="about" *ngIf="!aboutColapsed" [@toggle]="aboutState">
-      <p>I have been learning different programming languages ​​since 2014 when I started my technical course at the UFMG Technical College. I started my studies with C, and extended my knowledge to web-oriented languages ​​such as PHP, Ruby, JavaScript
-        and so on. Currently I'm studying for my bachelor's degree in Computer Science at the Federal University of Minas Gerais. Also, i'm involved with several online courses such as design, UX, machine learning and some of the most commonly used JavaScript
-        frameworks.
-      </p>
+      <p>{{ about }}</p>
     </div>
   </div>
 </div>

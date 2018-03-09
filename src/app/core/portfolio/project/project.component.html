@@ -6,7 +6,7 @@
     <div class="col-md-8">
       <p class="title">{{ project.name }}</p>
       <a *ngIf="downloadable()" [href]="project.download" class="download" download>Download <i class="fas fa-download"></i></a>
-      <a *ngFor="let link of project.links" [href]="link.url" target="_blank" class="link">See project at {{ link.destination }}</a>
+      <a *ngFor="let link of project.links" [href]="link.url" target="_blank" class="link">{{ ver }} {{ link.destination }}</a>
     </div>
   </div>
 </div>

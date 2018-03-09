@@ -8,6 +8,7 @@ import { TopicService } from './core/home/topic/topic.service'
 import { SkillService } from './core/home/skill/skill.service'
 import { AcomplishmentService } from './core/home/acomplishments/acomplishment/acomplishment.service'
 import { ProjectService } from './core/portfolio/project/project.service'
+import { CoreService } from './core/core.service'
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { ProjectService } from './core/portfolio/project/project.service'
     CoreModule,
     AppRoutingModule
   ],
-  providers: [TopicService, SkillService, AcomplishmentService, ProjectService],
+  providers: [TopicService, SkillService, AcomplishmentService, ProjectService, CoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

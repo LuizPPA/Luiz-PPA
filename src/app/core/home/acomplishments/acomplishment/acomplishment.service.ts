@@ -1,10 +1,13 @@
 import { Injectable, OnInit } from '@angular/core'
 import { Http, Response } from '@angular/http'
+import { CoreService } from '../../../core.service'
 
 import { Acomplishment } from './acomplishment.model'
 
 @Injectable()
 export class AcomplishmentService {
+  lang = 'pt'
+
   languages: Acomplishment[] = [
     // new Acomplishment('Portuguese', 'Native', 'Fluent writing, fluent reading, fluent speaking, fluent listening.'),
     // new Acomplishment('English', 'Professional Work Proficiency', 'Good writng, fluent reading, regular speaking, fluent listening.')
@@ -20,46 +23,53 @@ export class AcomplishmentService {
     // new Acomplishment('Angular 5', 'Udemy', 'Certified by udemy in the complete course of Angular 5. Certificate number: UC-0VC7AO3P.')
   ]
 
-  constructor(private http: Http){
+  constructor(private http: Http, private coreService: CoreService){
+    this.lang = this.coreService.currentLang
     this.fetchLanguages()
     this.fetchAwards()
     this.fetchCertificates()
+    this.coreService.lang.subscribe((lang) => {
+      this.lang = this.coreService.currentLang
+      this.fetchLanguages()
+      this.fetchAwards()
+      this.fetchCertificates()
+    })
   }
 
   putLanguages(){
-    this.http.put('https://luizppa-com.firebaseio.com/languages.json', this.languages).subscribe((response: Response) => {
+    this.http.put('https://luizppa-com.firebaseio.com/'+this.lang+'/languages.json', this.languages).subscribe((response: Response) => {
       console.log(response)
     })
   }
 
   putAwards(){
-    this.http.put('https://luizppa-com.firebaseio.com/awards.json', this.awards).subscribe((response: Response) => {
+    this.http.put('https://luizppa-com.firebaseio.com/'+this.lang+'/awards.json', this.awards).subscribe((response: Response) => {
       console.log(response)
     })
   }
 
   putCertificates(){
-    this.http.put('https://luizppa-com.firebaseio.com/certificates.json', this.certificates).subscribe((response: Response) => {
+    this.http.put('https://luizppa-com.firebaseio.com/'+this.lang+'/certificates.json', this.certificates).subscribe((response: Response) => {
       console.log(response)
     })
   }
 
   fetchLanguages(){
     console.log('Fetching languages')
-    this.http.get('https://luizppa-com.firebaseio.com/languages.json').subscribe((response: Response) => {
+    this.http.get('https://luizppa-com.firebaseio.com/'+this.lang+'/languages.json').subscribe((response: Response) => {
       this.languages = response.json()
     })
   }
 
   fetchAwards(){
     console.log('Fetching awards')
-    this.http.get('https://luizppa-com.firebaseio.com/awards.json').subscribe((response: Response) => {
+    this.http.get('https://luizppa-com.firebaseio.com/'+this.lang+'/awards.json').subscribe((response: Response) => {
       this.awards = response.json()
     })
   }
   fetchCertificates(){
     console.log('Fetching certificates')
-    this.http.get('https://luizppa-com.firebaseio.com/certificates.json').subscribe((response: Response) => {
+    this.http.get('https://luizppa-com.firebaseio.com/'+this.lang+'/certificates.json').subscribe((response: Response) => {
       this.certificates = response.json()
     })
   }
