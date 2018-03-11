@@ -32,6 +32,7 @@ import { CoreService } from '../core.service'
   ]
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  download = 'Fazer download como PDF'
   work = "Desenvolvedor Full Stack • Phari Solutions"
   education = "Cursando Ciência da Computação • UFMG"
   location = "Belo Horizonte, Brasil"
@@ -48,8 +49,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if(this.coreService.currentLang == 'en'){
+      this.download = 'Download as PDF'
       this.work = "Full Stack Developer • Phari Solutions"
-      this.education = "Undergraduated in Computer Science • UFMG"
+      this.education = "Undergraduate in Computer Science • UFMG"
       this.location = "Belo Horizonte, Brazil"
       this.uncolapse = "Show more"
       this.colapse = "Show less"
@@ -58,8 +60,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
     this.subscription = this.coreService.lang.subscribe((lang) => {
       if(lang == 'en'){
+        this.download = 'Download as PDF'
         this.work = "Full Stack Developer • Phari Solutions"
-        this.education = "Undergraduated in Computer Science • UFMG"
+        this.education = "Undergraduate in Computer Science • UFMG"
         this.location = "Belo Horizonte, Brazil"
         this.uncolapse = "Show more"
         this.colapse = "Show less"
@@ -67,6 +70,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.lang = 'Pt-Br'
       }
       else if(lang == 'pt'){
+        this.download = 'Fazer download como PDF'
         this.work = "Desenvolvedor Full Stack • Phari Solutions"
         this.education = "Cursando Ciência da Computação • UFMG"
         this.location = "Belo Horizonte, Brasil"
