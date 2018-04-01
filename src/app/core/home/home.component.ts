@@ -5,6 +5,9 @@ import { CoreService } from '../core.service'
 import { TopicService } from './topic/topic.service'
 import { SkillService } from './skill/skill.service'
 
+declare var jquery:any
+declare var $ :any
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -26,9 +29,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.route.fragment.subscribe(fragment => {
       try{
-        document.getElementById(fragment).scrollIntoView()
+        var $root = $('html, body')
+        $root.animate({
+            scrollTop: $('#'+fragment).offset().top
+        }, 300, function () {
+            window.location.hash = fragment
+        })
       }
       catch(e){
+        console.error(e)
       }
     })
     if(this.coreService.currentLang == 'en'){

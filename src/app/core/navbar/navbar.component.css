@@ -3,7 +3,8 @@ a{
   color: inherit;
 }
 .bar{
-  height:100vh;
+  height:130vh;
+  overflow: hidden;
   min-width: 70px;
   background-color: #0F3F6E;
   color: white;
