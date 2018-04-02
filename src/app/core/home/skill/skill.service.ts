@@ -45,13 +45,10 @@ export class SkillService implements OnDestroy{
     })
   }
 
-  getSkills(amount: number){
-    if(amount < 1 || amount > this.skills.length){
-      return this.skills.slice()
-    }
-    else{
-      return this.skills.slice(0, amount)
-    }
+  getSkills(start: number, amount: number){
+    if(start < 0 || start > this.skills.length || start == null) start = 0
+    if(amount < 1 || amount > this.skills.length || amount == null) amount = this.skills.length
+    return this.skills.slice(start, amount)
   }
 
   ngOnDestroy(){

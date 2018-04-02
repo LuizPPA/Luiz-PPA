@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy} from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { CoreService } from '../core.service'
+import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 
 import { TopicService } from './topic/topic.service'
 import { SkillService } from './skill/skill.service'
@@ -11,7 +12,30 @@ declare var $ :any
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('toggle', [
+      transition('void => open', [
+        style({
+          'opacity': 0,
+          'height': 0
+        }),
+        animate(400)
+      ]),
+      transition('open => void', [
+        animate(400, keyframes([
+          style({
+            'opacity': 0,
+            offset: 0
+          }),
+          style({
+            'height': 0,
+            offset: 1
+          }),
+        ]))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit, OnDestroy {
   experiences = 'Experiências'
@@ -23,6 +47,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   subscription = null
   skillsColapsed = true
+  skillsState = 'closed'
 
   constructor(private topicService: TopicService, private skillService: SkillService, private route: ActivatedRoute, private coreService: CoreService) {}
 
@@ -30,11 +55,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.route.fragment.subscribe(fragment => {
       try{
         var $root = $('html, body')
-        $root.animate({
-            scrollTop: $('#'+fragment).offset().top
-        }, 300, function () {
-            window.location.hash = fragment
-        })
+        if($('#'+fragment).offset() != null){
+          $root.animate({
+              scrollTop: $('#'+fragment).offset().top
+          }, 300, function () {
+              window.location.hash = fragment
+          })
+        }
       }
       catch(e){
         console.error(e)
@@ -76,16 +103,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     return this.topicService.getEducation()
   }
 
-  getSkills(){
-    if(this.skillsColapsed){
-      return this.skillService.getSkills(4)
-    }
-    else{
-      return this.skillService.getSkills(0)
-    }
+  getSkills(start: number, amount: number){
+    return this.skillService.getSkills(start, amount)
   }
 
   toggleSkillsColapse(){
+    this.skillsState == 'closed' ? this.skillsState = 'open' : this.skillsState = 'closed'
     this.skillsColapsed = !this.skillsColapsed
   }
 

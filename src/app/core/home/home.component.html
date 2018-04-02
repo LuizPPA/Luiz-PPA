@@ -6,7 +6,10 @@
     <app-topic *ngFor="let topic of getEducation()" [topic]="topic"></app-topic>
     <p id='skills' class="topic darker-blue">{{ skills }}</p>
     <hr>
-    <app-skill *ngFor="let skill of getSkills(); let i = index" [skill]="skill"></app-skill>
+    <app-skill *ngFor="let skill of getSkills(0, 3); let i = index" [skill]="skill"></app-skill>
+    <div *ngIf="!skillsColapsed" [@toggle]="skillsState">
+      <app-skill *ngFor="let skill of getSkills(3, 0); let i = index" [skill]="skill"></app-skill>
+    </div>
     <div *ngIf="skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
       <p class="colapsable pointer">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
     </div>
