@@ -58,9 +58,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         if($('#'+fragment).offset() != null){
           $root.animate({
               scrollTop: $('#'+fragment).offset().top
-          }, 300, function () {
-              window.location.hash = fragment
-          })
+          }, 300)
         }
       }
       catch(e){
