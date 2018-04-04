@@ -9,6 +9,10 @@
   font-size: 36px;
   padding: 5% 0% 0% 2%;
 }
+.sub-topic{
+  font-size: 32px;
+  padding: 5% 0% 0% 5%;
+}
 @media (max-width: 990px){
    .texts{
      margin-left: 10%;

@@ -5,18 +5,21 @@
     <p id='education' class="topic darker-blue">{{ education }}</p>
     <app-topic *ngFor="let topic of getEducation()" [topic]="topic"></app-topic>
     <p id='skills' class="topic darker-blue">{{ skills }}</p>
+    <p class="sub-topic darker-blue">{{featuredSkills}}</p>
     <hr>
     <app-skill *ngFor="let skill of getSkills(0, 3); let i = index" [skill]="skill"></app-skill>
-    <div *ngIf="!skillsColapsed" [@toggle]="skillsState">
-      <app-skill *ngFor="let skill of getSkills(3, 0); let i = index" [skill]="skill"></app-skill>
-    </div>
     <div *ngIf="skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
       <p class="colapsable pointer">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
     </div>
     <div *ngIf="!skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
       <p class="colapsable pointer">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
     </div>
-    <p id='accomplishments' class="topic darker-blue">{{ accomplishments }}</p>
+    <div *ngIf="!skillsColapsed" [@toggle]="skillsState">
+      <p class="sub-topic darker-blue">{{otherSkills}}</p>
+      <hr>
+      <app-skill *ngFor="let skill of getSkills(3, 0); let i = index" [skill]="skill"></app-skill>
+    </div>
+    <p id='accomplishments' class="topic darker-blue clearfix">{{ accomplishments }}</p>
     <app-acomplishments></app-acomplishments>
   </div>
 </div>
