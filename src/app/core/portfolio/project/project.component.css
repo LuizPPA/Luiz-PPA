@@ -9,6 +9,7 @@
   margin-bottom: 10%;
   font-size: 32px;
   display: block;
+  text-align: left;
 }
 .download{
   font-size: 20px;
@@ -16,6 +17,7 @@
   text-decoration: none;
   color: #8F8F8F;
   margin: 0;
+  text-align: left;
 }
 .link{
   font-size: 20px;
@@ -23,6 +25,7 @@
   text-decoration: none;
   color: #545454;
   margin: 0;
+  text-align: left;
 }
 .description{
   font-size: 20px;

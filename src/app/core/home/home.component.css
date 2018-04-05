@@ -12,6 +12,7 @@
 .sub-topic{
   font-size: 32px;
   padding: 5% 0% 0% 5%;
+  text-align: left;
 }
 @media (max-width: 990px){
    .texts{
