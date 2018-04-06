@@ -32,7 +32,8 @@ import { CoreService } from '../core.service'
   ]
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  download = 'Fazer download como PDF'
+  download = 'Baixar em PDF'
+  cvDownload = 'https://s3-sa-east-1.amazonaws.com/luizppa-assets/docs/pt/luizppa-cv.pdf'
   work = "Desenvolvedor Full Stack • Phari Solutions"
   education = "Cursando Ciência da Computação • UFMG"
   location = "Belo Horizonte, Brasil"
@@ -50,6 +51,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if(this.coreService.currentLang == 'en'){
       this.download = 'Download as PDF'
+      this.cvDownload = 'https://s3-sa-east-1.amazonaws.com/luizppa-assets/docs/en/luizppa-cv.pdf'
       this.work = "Full Stack Developer • Phari Solutions"
       this.education = "Undergraduate in Computer Science • UFMG"
       this.location = "Belo Horizonte, Brazil"
@@ -61,6 +63,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.subscription = this.coreService.lang.subscribe((lang) => {
       if(lang == 'en'){
         this.download = 'Download as PDF'
+        this.cvDownload = 'https://s3-sa-east-1.amazonaws.com/luizppa-assets/docs/en/luizppa-cv.pdf'
         this.work = "Full Stack Developer • Phari Solutions"
         this.education = "Undergraduate in Computer Science • UFMG"
         this.location = "Belo Horizonte, Brazil"
@@ -70,7 +73,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.lang = 'Pt-Br'
       }
       else if(lang == 'pt'){
-        this.download = 'Fazer download como PDF'
+        this.download = 'Baixar em PDF'
+        this.cvDownload = 'https://s3-sa-east-1.amazonaws.com/luizppa-assets/docs/pt/luizppa-cv.pdf'
         this.work = "Desenvolvedor Full Stack • Phari Solutions"
         this.education = "Cursando Ciência da Computação • UFMG"
         this.location = "Belo Horizonte, Brasil"

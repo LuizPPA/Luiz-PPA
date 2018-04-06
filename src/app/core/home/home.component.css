@@ -10,8 +10,9 @@
   padding: 5% 0% 0% 2%;
 }
 .sub-topic{
-  font-size: 32px;
-  padding: 5% 0% 0% 5%;
+  font-size: 28px;
+  margin-left: 8%;
+  padding: 3% 0% 0% 0%;
   text-align: left;
 }
 @media (max-width: 990px){
