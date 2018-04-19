@@ -7,7 +7,7 @@ export class ContactService{
   constructor(private http: Http){}
 
   sendEmail(email, form){
-    if(email.from == null || email.name == null || email.message || null || email.from == "" || email.name == "" || email.message || ""){
+    if(email.from == null || email.name == null || email.message == null || email.from == "" || email.name == "" || email.message == ""){
     }
     else{
       this.http.post('https://us-central1-luizppa-com.cloudfunctions.net/sendMail', email).subscribe((response: Response) => {
