@@ -52,23 +52,32 @@
   box-shadow: 0px 0px 5px #C4C4C4;
   margin-top: 3%;
   padding: 1.1% 2% 1.1% 2%;
-  border: 1px solid #062E54;
+  border: 1px solid #0F3F6E;
 }
-.button:hover{
+.button-lg{
+  box-shadow: 0px 0px 5px #C4C4C4;
+  margin-top: 3%;
+  font-weight: 400;
+  font-size: 22px;
+  padding: 1.1% 2% 1.1% 2%;
+  border: 1px solid #0F3F6E;
+}
+.button:hover, .button-lg:hover{
   text-decoration: none;
   color: white;
 }
-.button:visited{
+.button:visited, .button-lg:visited{
   text-decoration: none;
   color: white;
 }
-.button:focus{
+.button:focus, .button-lg:focus{
+  outline: none;
   text-decoration: none;
   color: white;
 }
-.button:active{
+.button:active, .button-lg:active{
   color: white;
-  background-color: #062E54;
+  background-color: #0F3F6E;
 }
 .inline-block{
   display: inline-block;
