@@ -9,6 +9,7 @@ import { SkillService } from './core/home/skill/skill.service'
 import { AcomplishmentService } from './core/home/acomplishments/acomplishment/acomplishment.service'
 import { ProjectService } from './core/portfolio/project/project.service'
 import { CoreService } from './core/core.service'
+import { ContactService } from './core/contact/contact.service'
 import { CookieService } from 'ngx-cookie-service'
 
 
@@ -21,7 +22,7 @@ import { CookieService } from 'ngx-cookie-service'
     CoreModule,
     AppRoutingModule
   ],
-  providers: [TopicService, SkillService, AcomplishmentService, ProjectService, CoreService, CookieService],
+  providers: [TopicService, SkillService, AcomplishmentService, ProjectService, CoreService, ContactService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

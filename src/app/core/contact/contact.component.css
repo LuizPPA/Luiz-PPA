@@ -1,0 +1,53 @@
+.contact{
+  background-color: white;
+  box-shadow: 0px 0px 3px #C4C4C4;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  margin-top: 5%;
+  padding-bottom: 8%;
+}
+.topic{
+  font-size: 36px;
+  padding: 5% 0% 0% 3%;
+}
+.form{
+  margin-top: 5%;
+  padding: 0% 3% 0% 3%;
+}
+.form-label{
+  font-weight: 200;
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+}
+input.form-field{
+  height: 40px;
+}
+.form-field{
+  padding-left: 8px;
+  font-size: 20px;
+  font-weight: 200;
+  border: 1px solid rgb(204,204,204);
+  width: 100%;
+  outline-color: #118BFF;
+}
+
+@media (max-width: 990px){
+   .contact{
+     margin-left: 10%;
+   }
+}
+@media (max-width: 560px){
+  .contact{
+    margin: 0% 0% 0% 15%;
+  }
+}
+@media (max-width: 512px){
+  .contact{
+    margin: 0% 0% 0% 15%;
+  }
+}
+@media (max-width: 350px){
+  .contact{
+    margin: 0% 0% 0% 20%;
+  }
+}

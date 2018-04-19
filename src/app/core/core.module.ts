@@ -10,7 +10,8 @@ import { AcomplishmentsComponent } from './home/acomplishments/acomplishments.co
 import { AcomplishmentComponent } from './home/acomplishments/acomplishment/acomplishment.component';
 import { HeaderComponent } from './header/header.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ProjectComponent } from './portfolio/project/project.component'
+import { ProjectComponent } from './portfolio/project/project.component';
+import { ContactComponent } from './contact/contact.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectComponent } from './portfolio/project/project.component'
     AcomplishmentComponent,
     HeaderComponent,
     PortfolioComponent,
-    ProjectComponent
+    ProjectComponent,
+    ContactComponent
   ],
   imports: [
     SharedModule,
@@ -30,7 +32,8 @@ import { ProjectComponent } from './portfolio/project/project.component'
   ],
   exports: [
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent
   ]
 })
 
