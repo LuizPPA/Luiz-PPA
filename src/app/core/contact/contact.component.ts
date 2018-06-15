@@ -32,7 +32,9 @@ export class ContactComponent implements OnInit, OnDestroy {
         'message': new FormControl(null)
       }
     )
+  }
 
+  ngOnInit() {
     if(this.core.currentLang == 'en'){
       this.contact = "Get in touch"
       this.name = "Name"
@@ -56,9 +58,6 @@ export class ContactComponent implements OnInit, OnDestroy {
         this.send = "Enviar"
       }
     })
-  }
-
-  ngOnInit() {
   }
 
   onSubmit(){

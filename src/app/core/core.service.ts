@@ -8,14 +8,14 @@ export class CoreService{
   lang: Subject<string> = new Subject<string>()
 
   constructor(private cookies: CookieService){
-    if(this.cookies.check('lang')){
-      this.currentLang = this.cookies.get('lang')
+    if(localStorage.getItem('lang')){
+      this.currentLang = localStorage.getItem('lang')
     }
   }
 
   changeLanguage(){
     this.currentLang == 'pt' ? this.currentLang = 'en' : this.currentLang = 'pt'
-    this.cookies.set('lang', this.currentLang)
+    localStorage.setItem('lang', this.currentLang)
     this.lang.next(this.currentLang)
   }
 }
