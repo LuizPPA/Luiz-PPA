@@ -1,20 +1,22 @@
-<div id="nav-root" class="row">
-  <div class="col-md-12">
-    <div id="icons" class="col-sm-12 col-md-3 col-xl-2 bar unselectable" align="center">
-      <a class="brand-icon" routerLink="/" fragment="top"><i class="fas fa-bars"></i></a>
-      <a class="menu-icon" routerLink="/" fragment="experiences"><i class="fas fa-briefcase"></i></a>
-      <a class="menu-icon" routerLink="/" fragment="education"><i class="fas fa-graduation-cap"></i></a>
-      <a class="menu-icon" routerLink="/" fragment="skills"><i class="fas fa-code"></i></a>
-      <a class="menu-icon" routerLink="/" fragment="accomplishments"><i class="fas fa-trophy"></i></a>
-      <a class="menu-icon" routerLink="/portfolio"><i class="fas fa-book"></i></a>
-    </div>
-    <div id="links" class="hidden-sm col-md-9 col-xl-10 menu unselectable">
-      <div class="brand pointer" routerLink="/" fragment="top">Luiz Philippe</div>
-      <div class="menu-item" routerLink="/" fragment="experiences">{{ experiences }}</div>
-      <div class="menu-item" routerLink="/" fragment="education">{{ education }}</div>
-      <div class="menu-item" routerLink="/" fragment="skills">{{ skills }}</div>
-      <div class="menu-item" routerLink="/" fragment="accomplishments">{{ accomplishments }}</div>
-      <div class="menu-item" routerLink="/portfolio">{{ portfolio }}</div>
+<div class="col-xs-2 col-md-3"  id="nav-root">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="icons" class="col-sm-12 col-md-3 col-xl-2 bar unselectable" align="center">
+        <a class="brand-icon" routerLink="/" fragment="top" (click)="collapse_menu()"><i class="fas fa-bars"></i></a>
+        <a class="menu-icon" routerLink="/" fragment="experiences"><i class="fas fa-briefcase"></i></a>
+        <a class="menu-icon" routerLink="/" fragment="education"><i class="fas fa-graduation-cap"></i></a>
+        <a class="menu-icon" routerLink="/" fragment="skills"><i class="fas fa-code"></i></a>
+        <a class="menu-icon" routerLink="/" fragment="accomplishments"><i class="fas fa-trophy"></i></a>
+        <a class="menu-icon" routerLink="/portfolio"><i class="fas fa-book"></i></a>
+      </div>
+      <div id="links" *ngIf="!menu_collapsed" [@toggle_bar]="menu_state" class="hidden-sm col-md-9 col-xl-10 menu unselectable">
+        <div class="brand pointer" routerLink="/" fragment="top">Luiz Philippe</div>
+        <div class="menu-item" routerLink="/" fragment="experiences">{{ experiences }}</div>
+        <div class="menu-item" routerLink="/" fragment="education">{{ education }}</div>
+        <div class="menu-item" routerLink="/" fragment="skills">{{ skills }}</div>
+        <div class="menu-item" routerLink="/" fragment="accomplishments">{{ accomplishments }}</div>
+        <div class="menu-item" routerLink="/portfolio">{{ portfolio }}</div>
+      </div>
     </div>
   </div>
 </div>

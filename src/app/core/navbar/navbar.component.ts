@@ -1,10 +1,31 @@
 import { Component, OnInit } from '@angular/core'
+import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 import { CoreService } from '../core.service'
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+  animations: [
+    trigger('toggle_bar', [
+      transition('void => open', [
+        style({
+          'transform': 'translateX(-100%)'
+        }),
+        animate(200)
+      ]),
+      transition('open => void', [
+        animate(200, keyframes([
+          style({
+            'transform': 'translateX(0)'
+          }),
+          style({
+            'transform': 'translateX(-100%)'
+          }),
+        ]))
+      ])
+    ])
+  ]
 })
 export class NavbarComponent implements OnInit {
   experiences = 'Experiências'
@@ -12,7 +33,8 @@ export class NavbarComponent implements OnInit {
   skills = 'Habilidades'
   accomplishments = 'Realizações'
   portfolio = 'Portifólio'
-
+  menu_state = 'open'
+  menu_collapsed = false
   subscription = null
 
   constructor(private coreService: CoreService) { }
@@ -47,4 +69,8 @@ export class NavbarComponent implements OnInit {
     this.subscription.unsubscribe()
   }
 
+  public collapse_menu(){
+    this.menu_collapsed = !this.menu_collapsed
+    this.menu_collapsed ? this.menu_state = 'void' : this.menu_state = 'open'
+  }
 }

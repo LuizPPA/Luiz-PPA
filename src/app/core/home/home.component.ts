@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.route.fragment.subscribe(fragment => {
       try{
-        var $root = $('html, body')
+        var $root = $('html, app-home')
         if($('#'+fragment).offset() != null){
           $root.animate({
               scrollTop: $('#'+fragment).offset().top
