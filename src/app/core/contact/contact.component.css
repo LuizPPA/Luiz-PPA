@@ -1,3 +1,6 @@
+#contact-form-wrapper{
+  margin-left: 5px;
+}
 .contact{
   background-color: white;
   box-shadow: 0px 0px 3px #C4C4C4;
@@ -30,25 +33,4 @@ input.form-field{
   border: 1px solid rgb(204,204,204);
   width: 100%;
   outline-color: #118BFF;
-}
-
-@media (max-width: 990px){
-   .contact{
-     margin-left: 10%;
-   }
-}
-@media (max-width: 560px){
-  .contact{
-    margin: 0% 0% 0% 15%;
-  }
-}
-@media (max-width: 512px){
-  .contact{
-    margin: 0% 0% 0% 15%;
-  }
-}
-@media (max-width: 350px){
-  .contact{
-    margin: 0% 0% 0% 20%;
-  }
 }

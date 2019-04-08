@@ -1,32 +1,34 @@
 <div class="row" id="top">
-  <img class="picture" src="https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg" alt="A picture of me">
   <a id="download" [href]="cvDownload" target="_blank" download class="button right dark-blue-bg white"><i class="fas fa-download"></i> {{ download }}</a>
-  <div class="header">
+  <div id="header-box" class="col-md-9 col-md-offset-3 header">
+    <img class="picture" src="https://s3-sa-east-1.amazonaws.com/luizppa-assets/img/profile.jpg" alt="A picture of me">
     <p class="name darker-blue">Luiz Philippe</p>
-    <div class="pointer darker-blue lang-box" align="center" (click)="changeLanguage()">
-      <p class="lang">{{ lang }}</p>
-      <i class="fas fa-globe"></i>
-    </div>
-    <p class="titles dark-blue">{{ work }}<br>{{ education }}</p>
-    <p class="location dark-blue">{{ location }}</p>
-    <div class="row contacts dark-blue">
-      <div class="col-md-6">
-        <p class="contact"><i class="fas fa-envelope-square contact-icon"></i>luizphilippep@gmail.com</p>
-        <p class="contact"><i class="fas fa-phone-square contact-icon"></i>+55 (31) 98879-9522</p>
+    <div id="info-box">
+      <div class="pointer darker-blue lang-box unselectable" align="center" (click)="changeLanguage()">
+        <p class="lang">{{ lang }}</p>
+        <i class="fas fa-globe"></i>
       </div>
-      <div class="col-md-6">
-        <a href="https://github.com/LuizPPA" target="_blank" class="contact"><i class="fab fa-github-square contact-icon"></i>Github</a>
-        <a href="https://www.linkedin.com/in/luiz-philippe/" target="_blank" class="contact"><i class="fab fa-linkedin contact-icon"></i>LinkedIn</a>
+      <p class="titles dark-blue">{{ work }}<br>{{ education }}</p>
+      <p class="location dark-blue">{{ location }}</p>
+      <div class="row contacts dark-blue">
+        <div class="col-md-6">
+          <p class="contact"><i class="fas fa-envelope-square contact-icon"></i>luizphilippep@gmail.com</p>
+          <p class="contact"><i class="fas fa-phone-square contact-icon"></i>+55 (31) 98879-9522</p>
+        </div>
+        <div class="col-md-6">
+          <a href="https://github.com/LuizPPA" target="_blank" class="contact"><i class="fab fa-github-square contact-icon"></i>Github</a>
+          <a href="https://www.linkedin.com/in/luiz-philippe/" target="_blank" class="contact"><i class="fab fa-linkedin contact-icon"></i>LinkedIn</a>
+        </div>
       </div>
-    </div>
-    <div *ngIf="aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
-      <p class="colapsable pointer">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
-    </div>
-    <div *ngIf="!aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
-      <p class="colapsable pointer">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
-    </div>
-    <div class="about" *ngIf="!aboutColapsed" [@toggle]="aboutState">
-      <p>{{ about }}</p>
+      <div *ngIf="aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
+        <p class="colapsable pointer unselectable">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
+      </div>
+      <div *ngIf="!aboutColapsed" class="darker-blue" align="center" (click)="toggleAboutColapse()">
+        <p class="colapsable pointer unselectable">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
+      </div>
+      <div class="about" *ngIf="!aboutColapsed" [@toggle]="aboutState">
+        <p>{{ about }}</p>
+      </div>
     </div>
   </div>
 </div>

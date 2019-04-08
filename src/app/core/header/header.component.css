@@ -1,22 +1,31 @@
-.picture{
-  width: 35%;
-  margin: 10% 0% 0% 5%;
-  border-radius: 50%;
-  border: 8px solid white;
-  position: absolute;
-  box-shadow: -1px -1px 5px #C6C4C4;
+#header-box{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 5px #C4C4C4;
+}
+#info-box{
+  width: 90%;
+  margin: auto;
+  margin-top: -30px;
 }
 .header{
-  margin: 28% 0% 8% 15%;
   background-color: white;
-  box-shadow: 0px 0px 5px #C4C4C4;
   font-family: 'Open Sans', sans-serif;
+}
+.picture{
+  width: 40%;
+  border-radius: 50%;
+  border: 8px solid white;
+  box-shadow: -1px -1px 5px #C6C4C4;
+  margin-top: -15%;
+  margin-left: -25%;
 }
 .name{
   font-size: 48px;
-  margin-top: 4%;
-  padding: 0% 0% 0% 30%;
   display: inline-block;
+  width: 80%;
+  text-align: center;
+  margin: auto;
 }
 .lang{
   font-size: 12px;
@@ -24,76 +33,27 @@
 }
 .titles{
   font-size: 24px;
-  padding:4% 0% 0% 5%;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 .location{
   font-size: 18px;
-  padding:0% 5% 0% 5%;
+  margin-bottom: 15px;
 }
 .contacts{
   font-size: 18px;
-  margin: 3%;
 }
 .contact{
-  margin: 0%;
   text-decoration: none;
+  margin-bottom: 6px;
   color: inherit;
   display: block;
 }
 .contact-icon{
-  margin-right: 3%;
+  margin-right: 5px;
 }
 .about{
   font-size: 18px;
-  padding: 0% 5% 3% 5%;
   text-align: justify;
-}
-@media (max-width: 1200px){
-  .picture{
-      width: 40%;
-      position: absolute;
-      margin: 10% 0% 0% 0%;
-   }
-   .header{
-     margin: 42% 0% 8% 15%;
-   }
-}
-@media (max-width: 990px){
-  .picture{
-      box-shadow: 0px 0px 5px #C6C4C4;
-      margin: 0% 0% 0% 30%;
-   }
-   .header{
-     margin: 53% 0% 8% 10%;
-   }
-}
-@media (max-width: 560px){
-  #download{
-    display: none;
-  }
-  .picture{
-    margin: 0% 0% 0% 33%;
-  }
-  .header{
-    margin: 50% 0% 8% 15%;
-  }
-}
-@media (max-width: 512px){
-  .picture{
-    margin: 0% 0% 0% 36%;
-  }
-  .header{
-    margin: 50% 0% 8% 15%;
-  }
-  .name{
-    padding: 4% 0% 0% 10%;
-  }
-}
-@media (max-width: 350px){
-  .picture{
-    margin: 0% 0% 0% 36%;
-  }
-  .header{
-    margin: 50% 0% 8% 20%;
-  }
+  margin-bottom: 20px;
 }

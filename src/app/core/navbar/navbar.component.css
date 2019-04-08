@@ -2,59 +2,54 @@ a{
   text-decoration: none;
   color: inherit;
 }
-.bar{
-  height:130vh;
+i{
+  align-items: center;
+}
+#nav-root{
+  /* position: fixed; */
+  overflow-y: hidden;
+  height: 100vh;
+}
+#icons{
+  margin-left: -15px;
+}
+.bar,.menu{
+  height:100vh;
   overflow: hidden;
-  width: 70px !important;
-  background-color: #0F3F6E;
   color: white;
-  padding-top: 4%;
+  padding-top: 20px !important;
+}
+.bar{
+  background-color: #0F3F6E;
   box-shadow: 0px 1px 8px #072947;
 }
 .menu{
-  padding-left: 70px;
-  height:100vh;
-  min-width: 320px;
   background-color: #09457F;
   font-family: 'Noto Sans', sans-serif;
-  color: white;
   box-shadow: 0px 1px 3px #404040;
 }
-.menu-item{
-  margin: 0;
-  padding: 4% 5% 4% 8%;
-  font-size: 26px;
+.menu-item,.menu-icon{
+  font-size: 24px;
   display: block;
-  cursor: pointer;
   outline: 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.menu-item{
 }
 .menu-icon{
-  padding: 0;
-  margin: 48% 0% 0% 0%;
+  text-align: center;
+}
+.brand,.brand-icon{
+  outline: 0;
   font-size: 26px;
   display: block;
-  cursor: pointer;
-  outline: 0;
+  margin-bottom: 20px;
 }
 .brand{
-  outline: 0;
-  margin: 0;
-  padding: 5% 5% 8% 8%;
-  font-size: 36px;
-  display: block;
 }
 .brand-icon{
-  outline: 0;
-  margin: 0% 0% 70% 0%;
-  padding: 5% 5% 8% 6%;
-  font-size: 36px;
-  display: block;
 }
 .active-link{
   background-color: #0F3F6E;
-}
-@media (max-width: 999px){
-  .menu{
-    display: none;
-   }
 }

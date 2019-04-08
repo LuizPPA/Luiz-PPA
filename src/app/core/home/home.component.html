@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="texts">
+  <div id="home-content" class="col-xs-12 texts">
     <p id='experiences' class="topic darker-blue">{{ experiences }}</p>
     <app-topic *ngFor="let topic of getExperiences()" [topic]="topic"></app-topic>
     <p id='education' class="topic darker-blue">{{ education }}</p>
@@ -9,10 +9,10 @@
     <hr>
     <app-skill *ngFor="let skill of getSkills(0, 3); let i = index" [skill]="skill"></app-skill>
     <div *ngIf="skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
-      <p class="colapsable pointer">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
+      <p class="colapsable pointer unselectable">{{ uncolapse }}<br><i class="fas fa-angle-down"></i></p>
     </div>
     <div *ngIf="!skillsColapsed" class="darker-blue" align="center" (click)="toggleSkillsColapse()">
-      <p class="colapsable pointer">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
+      <p class="colapsable pointer unselectable">{{ colapse }}<br><i class="fas fa-angle-up"></i></p>
     </div>
     <div *ngIf="!skillsColapsed" [@toggle]="skillsState">
       <p class="sub-topic darker-blue">{{otherSkills}}</p>

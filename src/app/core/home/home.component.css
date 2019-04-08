@@ -1,9 +1,12 @@
+#home-content{
+  margin-left: 5px;
+  box-shadow: 0px 0px 5px #C4C4C4 !important;
+}
 .texts{
   background-color: white;
-  box-shadow: 0px 0px 3px #C4C4C4;
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
-  padding-bottom: 8%;
+  margin-bottom: 20px;
 }
 .topic{
   font-size: 36px;
@@ -14,24 +17,4 @@
   margin-left: 8%;
   padding: 3% 0% 0% 0%;
   text-align: left;
-}
-@media (max-width: 990px){
-   .texts{
-     margin-left: 10%;
-   }
-}
-@media (max-width: 560px){
-  .texts{
-    margin: 0% 0% 0% 15%;
-  }
-}
-@media (max-width: 512px){
-  .texts{
-    margin: 0% 0% 0% 15%;
-  }
-}
-@media (max-width: 350px){
-  .texts{
-    margin: 0% 0% 0% 20%;
-  }
 }
