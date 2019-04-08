@@ -2,17 +2,15 @@
   margin-top: 100px;
   margin-bottom: 50px;
   box-shadow: 0px 0px 5px #C4C4C4;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 #info-box{
   width: 90%;
   margin: auto;
   margin-top: -30px;
 }
-.header{
-  background-color: white;
-  font-family: 'Open Sans', sans-serif;
-}
-.picture{
+#picture{
   width: 40%;
   border-radius: 50%;
   border: 8px solid white;
@@ -20,27 +18,27 @@
   margin-top: -15%;
   margin-left: -25%;
 }
-.name{
+#name{
   font-size: 48px;
   display: inline-block;
   width: 80%;
   text-align: center;
   margin: auto;
 }
-.lang{
+#lang{
   font-size: 12px;
   margin: 0%;
 }
-.titles{
+#titles{
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 15px;
 }
-.location{
+#location{
   font-size: 18px;
   margin-bottom: 15px;
 }
-.contacts{
+#contacts{
   font-size: 18px;
 }
 .contact{
@@ -52,8 +50,32 @@
 .contact-icon{
   margin-right: 5px;
 }
-.about{
+#about{
   font-size: 18px;
   text-align: justify;
   margin-bottom: 20px;
+}
+
+@media (max-width: 990px) {
+  #header-box{
+    margin-left: 5px;
+  }
+  #info-box{
+    margin-top: 5px;
+  }
+  #picture{
+    box-shadow: 0px 0px 5px #C6C4C4;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  #name{
+    width: auto;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 700px) {
+  #picture{
+    width: 70%;
+    margin: 30px 15% 30px 15% !important;
+  }
 }

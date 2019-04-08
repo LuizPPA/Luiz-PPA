@@ -21,12 +21,14 @@ i{
 }
 .bar{
   background-color: #0F3F6E;
-  box-shadow: 0px 1px 8px #072947;
+  box-shadow: 1px 0px 5px 1px #072640;
+  z-index: 3;
 }
 .menu{
   background-color: #09457F;
   font-family: 'Noto Sans', sans-serif;
-  box-shadow: 0px 1px 3px #404040;
+  box-shadow: 1px 0px 5px 1px #404040;
+  z-index: 2;
 }
 .menu-item,.menu-icon{
   font-size: 24px;

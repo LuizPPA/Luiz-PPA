@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 
 import { ProjectService } from './project/project.service'
+import { Project } from './project/project.model'
 import { CoreService } from '../core.service'
 
 @Component({

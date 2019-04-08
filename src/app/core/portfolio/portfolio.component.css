@@ -1,4 +1,5 @@
-.texts{
+#portfolio{
+  margin-left: 5px;
   background-color: white;
   box-shadow: 0px 0px 3px #C4C4C4;
   text-align: justify;
@@ -8,24 +9,4 @@
 .topic{
   font-size: 36px;
   padding: 5% 0% 0% 2%;
-}
-@media (max-width: 990px){
-   .texts{
-     margin-left: 10%;
-   }
-}
-@media (max-width: 560px){
-  .texts{
-    margin: 0% 0% 0% 15%;
-  }
-}
-@media (max-width: 512px){
-  .texts{
-    margin: 0% 0% 0% 15%;
-  }
-}
-@media (max-width: 350px){
-  .texts{
-    margin: 0% 0% 0% 20%;
-  }
 }
