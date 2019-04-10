@@ -54,19 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(private topicService: TopicService, private skillService: SkillService, private route: ActivatedRoute, private coreService: CoreService) {}
 
   ngOnInit() {
-    this.route.fragment.subscribe(fragment => {
-      try{
-        var $root = $('html, app-home')
-        if($('#'+fragment).offset() != null){
-          $root.animate({
-              scrollTop: $('#'+fragment).offset().top
-          }, 300)
-        }
-      }
-      catch(e){
-        console.error(e)
-      }
-    })
+    this.route.fragment.subscribe(this.scrollToFragment)
     if(this.coreService.currentLang == 'en'){
       this.experiences = 'Experiences'
       this.education = 'Education'
@@ -116,6 +104,39 @@ export class HomeComponent implements OnInit, OnDestroy {
   toggleSkillsColapse(){
     this.skillsState == 'closed' ? this.skillsState = 'open' : this.skillsState = 'closed'
     this.skillsColapsed = !this.skillsColapsed
+  }
+
+  scrollToFragment(fragment) {
+    console.log(fragment)
+    try{
+      var $root = $('html, app-home')
+      if($('#'+fragment).offset() != null){
+        $root.animate({
+            scrollTop: $('#'+fragment).offset().top
+        }, 300)
+      }
+    }
+    catch(e){
+      console.error(e)
+    }
+    let parent = document.getElementById('page-content')
+    let child = document.getElementById(fragment)
+    // Where is the parent on page
+    let parentRect = parent.getBoundingClientRect()
+    // What can you see?
+    let parentViewableArea = {
+      height: parent.clientHeight,
+      width: parent.clientWidth
+    };
+    // Where is the child
+    let childRect = child.getBoundingClientRect()
+    // Is the child viewable?
+    let isViewable = (childRect.top >= parentRect.top) && (childRect.top <= parentRect.top + (parentViewableArea.height/3))
+    // if you can't see the child try to scroll parent
+    if (!isViewable) {
+      // scroll by offset relative to parent
+      parent.scrollTop = (childRect.top + parent.scrollTop) - parentRect.top
+    }
   }
 
   ngOnDestroy(){
