@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, EventEmitter, Output } from '@angular/core'
 import { trigger, style, transition, animate, keyframes } from '@angular/animations'
 import { CoreService } from '../core.service'
 
@@ -28,14 +28,15 @@ import { CoreService } from '../core.service'
   ]
 })
 export class NavbarComponent implements OnInit {
-  experiences = 'Experiências'
-  education = 'Educação'
-  skills = 'Habilidades'
-  accomplishments = 'Realizações'
-  portfolio = 'Portifólio'
-  menu_state = 'open'
-  menu_collapsed = false
-  subscription = null
+  public experiences = 'Experiências'
+  public education = 'Educação'
+  public skills = 'Habilidades'
+  public accomplishments = 'Realizações'
+  public portfolio = 'Portifólio'
+  public menu_state = 'open'
+  public menu_collapsed = false
+  public subscription = null
+  @Output() bar_collapsed: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   constructor(private coreService: CoreService) { }
 
@@ -72,5 +73,6 @@ export class NavbarComponent implements OnInit {
   public collapse_menu(){
     this.menu_collapsed = !this.menu_collapsed
     this.menu_collapsed ? this.menu_state = 'void' : this.menu_state = 'open'
+    this.bar_collapsed.emit(this.menu_collapsed)
   }
 }
